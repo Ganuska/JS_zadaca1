@@ -22,8 +22,7 @@ const razbij = (e) => {
     .map((item, index) => {
       const velikoSlovo = (recenica) => {
         return recenica.trimStart().charAt(0) ===
-          trimmedFiltered[index].trimStart().charAt(0).toUpperCase() &&
-          /^[a-zA-Z]+$/
+          trimmedFiltered[index].trimStart().charAt(0).toUpperCase()
           ? "<h5>pocinje velikim slovom.</h5>"
           : "<h5>pocinje malim slovom.</h5>";
       };
