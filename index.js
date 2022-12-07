@@ -32,7 +32,6 @@ const razbij = (e) => {
         `;
     })
     .join("")}`;
-  console.log(recenice);
   textArea.value = "";
 };
 
