@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vjezba JS</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <section>
+      <form>
+        <textarea
+          name="longText"
+          id="longTxt"
+          cols="40"
+          rows="10"
+          placeholder="Unesite recenice, svaku recenicu odvojite tockom."
+        ></textarea>
+        <button type="submit" onkeydown="enter(event)" onclick="razbij(event)">
+          Razbij
+        </button>
+      </form>
+    </section>
+    <article>
+      <p id="content"></p>
+      <div id="receniceShow"></div>
+    </article>
+    <script src="index.js"></script>
+  </body>
+</html>
