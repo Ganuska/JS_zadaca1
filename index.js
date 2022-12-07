@@ -13,16 +13,17 @@ const razbij = (e) => {
   recenice.forEach((item) => {
     trimmed.push(item.trim());
   });
+  const trimmedFiltered = trimmed.filter((item) => item && item);
 
-  console.log(trimmed);
   content.innerHTML = `ukupan broj unesenih znakova je: ${textArea.value.length} <br> 
-  ukupan broj recenica je: ${trimmed.length}`;
+  ukupan broj recenica je: ${trimmedFiltered.length}`;
 
-  showRecenice.innerHTML = `${trimmed
+  showRecenice.innerHTML = `${trimmedFiltered
     .map((item, index) => {
       const velikoSlovo = (recenica) => {
         return recenica.trimStart().charAt(0) ===
-          trimmed[index].trimStart().charAt(0).toUpperCase() && /^[a-zA-Z]+$/
+          trimmedFiltered[index].trimStart().charAt(0).toUpperCase() &&
+          /^[a-zA-Z]+$/
           ? "<h5>pocinje velikim slovom.</h5>"
           : "<h5>pocinje malim slovom.</h5>";
       };
